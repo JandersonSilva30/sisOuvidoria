@@ -43,7 +43,7 @@
 						
 						<td>${fieldValue(bean: manifestanteInstance, field: "email")}</td>
 						
-						<td>${fieldValue(bean: manifestanteInstance, field: "endereco.id")}</td>
+						<td>${fieldValue(bean: manifestanteInstance, field: "endereco.logradouro")}</td>
 					
 						
 					

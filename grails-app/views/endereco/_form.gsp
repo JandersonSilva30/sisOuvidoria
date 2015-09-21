@@ -1,13 +1,12 @@
 <%@ page import="sisouvidoria.Endereco" %>
 
 
-
 <div class="fieldcontain ${hasErrors(bean: enderecoInstance, field: 'manifestante', 'error')} ">
 	<label for="manifestante">
 		<g:message code="endereco.manifestante.label" default="Manifestante" />
 		
 	</label>
-	<g:select id="manifestante" name="manifestante.id" from="${sisouvidoria.Manifestante.list()}" optionKey="id" value="${enderecoInstance?.manifestante?.id}" class="many-to-one" noSelection="['null': '']"/>
+	<g:select id="manifestante" name="manifestante.id" from="${sisouvidoria.Manifestante.list()}" optionKey="id" optionValue="nome" value="${enderecoInstance?.manifestante?.id}" class="many-to-one" noSelection="['null': '']"/>
 
 </div>
 

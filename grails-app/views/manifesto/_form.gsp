@@ -1,7 +1,5 @@
 <%@ page import="sisouvidoria.Manifesto" %>
 
-
-
 <div class="fieldcontain ${hasErrors(bean: manifestoInstance, field: 'resposta', 'error')} ">
 	<label for="resposta">
 		<g:message code="manifesto.resposta.label" default="Resposta" />
@@ -55,4 +53,7 @@
 	<g:select id="status" name="status.id" from="${sisouvidoria.Status.list()}" optionKey="id" optionValue="descricao" required="" value="${manifestoInstance?.status?.id}" class="many-to-one"/>
 
 </div>
+
+
+
 

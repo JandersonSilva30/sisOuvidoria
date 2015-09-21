@@ -27,7 +27,16 @@
 				<li class="fieldcontain">
 					<span id="endereco-label" class="property-label"><g:message code="manifestante.endereco.label" default="Endereco" /></span>
 					
-						<span class="property-value" aria-labelledby="endereco-label"><g:link controller="endereco" action="show" id="${manifestanteInstance?.endereco?.id}">${manifestanteInstance?.endereco?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="endereco-label"><g:link controller="endereco" action="show" id="${manifestanteInstance?.endereco?.id}">${manifestanteInstance?.endereco?.id}</g:link></span>
+					
+				</li>
+				</g:if>
+				
+				<g:if test="${manifestanteInstance?.nome}">
+				<li class="fieldcontain">
+					<span id="nome-label" class="property-label"><g:message code="manifestante.nome.label" default="Nome" /></span>
+					
+						<span class="property-value" aria-labelledby="nome-label"><g:fieldValue bean="${manifestanteInstance}" field="nome"/></span>
 					
 				</li>
 				</g:if>
@@ -52,14 +61,7 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${manifestanteInstance?.nome}">
-				<li class="fieldcontain">
-					<span id="nome-label" class="property-label"><g:message code="manifestante.nome.label" default="Nome" /></span>
-					
-						<span class="property-value" aria-labelledby="nome-label"><g:fieldValue bean="${manifestanteInstance}" field="nome"/></span>
-					
-				</li>
-				</g:if>
+				
 			
 			</ol>
 			<g:form url="[resource:manifestanteInstance, action:'delete']" method="DELETE">

@@ -27,7 +27,7 @@
 				<li class="fieldcontain">
 					<span id="manifestante-label" class="property-label"><g:message code="endereco.manifestante.label" default="Manifestante" /></span>
 					
-						<span class="property-value" aria-labelledby="manifestante-label"><g:link controller="manifestante" action="show" id="${enderecoInstance?.manifestante?.id}">${enderecoInstance?.manifestante?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="manifestante-label"><g:link controller="manifestante" action="show" id="${enderecoInstance?.manifestante?.id}">${enderecoInstance?.manifestante?.nome}</g:link></span>
 					
 				</li>
 				</g:if>

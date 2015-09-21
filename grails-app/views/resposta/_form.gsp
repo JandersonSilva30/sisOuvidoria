@@ -7,7 +7,7 @@
 		<g:message code="resposta.manifesto.label" default="Manifesto" />
 		
 	</label>
-	<g:select id="manifesto" name="manifesto.id" from="${sisouvidoria.Manifesto.list()}" optionKey="id" value="${respostaInstance?.manifesto?.id}" class="many-to-one" noSelection="['null': '']"/>
+	<g:select id="manifesto" name="manifesto.id" from="${sisouvidoria.Manifesto.list()}" optionKey="id" optionValue="id" value="${respostaInstance?.manifesto?.id}" class="many-to-one" noSelection="['null': '']"/>
 
 </div>
 

@@ -2,12 +2,25 @@
 
 
 
+
 <div class="fieldcontain ${hasErrors(bean: manifestanteInstance, field: 'endereco', 'error')} ">
 	<label for="endereco">
 		<g:message code="manifestante.endereco.label" default="Endereco" />
 		
 	</label>
-	<g:select id="endereco" name="endereco.id" from="${sisouvidoria.Endereco.list()}" optionKey="id" value="${manifestanteInstance?.endereco?.id}" class="many-to-one" noSelection="['null': '']"/>
+	<g:select id="endereco" name="endereco.id" from="${sisouvidoria.Endereco.list()}" optionKey="id" optionValue="id" value="${manifestanteInstance?.endereco?.id}" class="many-to-one" noSelection="['null': '']"/>
+
+</div>
+
+ 
+
+
+<div class="fieldcontain ${hasErrors(bean: manifestanteInstance, field: 'nome', 'error')} required">
+	<label for="nome">
+		<g:message code="manifestante.nome.label" default="Nome" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="nome" required="" value="${manifestanteInstance?.nome}"/>
 
 </div>
 
@@ -20,7 +33,7 @@
 
 </div>
 
-<!--  
+ <!--  
 <div class="fieldcontain ${hasErrors(bean: manifestanteInstance, field: 'manifesto', 'error')} ">
 	<label for="manifesto">
 		<g:message code="manifestante.manifesto.label" default="Manifesto" />
@@ -40,13 +53,4 @@
 </div>
 
 -->
-
-<div class="fieldcontain ${hasErrors(bean: manifestanteInstance, field: 'nome', 'error')} required">
-	<label for="nome">
-		<g:message code="manifestante.nome.label" default="Nome" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="nome" required="" value="${manifestanteInstance?.nome}"/>
-
-</div>
 

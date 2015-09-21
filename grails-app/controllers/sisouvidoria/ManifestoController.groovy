@@ -13,7 +13,51 @@ class ManifestoController {
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Manifesto.list(params), model:[manifestoInstanceCount: Manifesto.count()]
+		
+		//render(view:"/manifesto/index")
     }
+	
+	
+	/**def adicionar(){
+		
+		
+		//instanciando o manifesto
+		Manifesto novoManifesto = new Manifesto()		
+		novoManifesto.dataAbetura =new Date()
+		novoManifesto.relato = ""
+		
+		//instanciando manifestante
+		Manifestante manifestante = new Manifestante()
+		manifestante.nome = ""
+		manifestante.email = ""
+		
+		//isntanciando endereço
+		
+		Endereco endereco = new Endereco()
+		
+		
+		//instanciando assunto
+		Assunto assunto = new Assunto()
+		assunto.id = 1
+		
+		//instanciando Status
+		Status status = new Status()
+		status.id = 1
+		
+		//instanciando Resposta
+		Resposta resposta = new Resposta()		
+		
+		render(template:"/manifesto/form", model: [manifesto: novoManifesto])
+		
+		//render "Hello this is a greeting box."
+		
+		
+		
+	}
+	
+	def salvar(){
+		
+	}*/
 
     def show(Manifesto manifestoInstance) {
         respond manifestoInstance
@@ -22,6 +66,8 @@ class ManifestoController {
     def create() {
         respond new Manifesto(params)
     }
+    
+    
 
     @Transactional
     def save(Manifesto manifestoInstance) {
@@ -80,6 +126,8 @@ class ManifestoController {
             notFound()
             return
         }
+		
+		
 
         manifestoInstance.delete flush:true
 

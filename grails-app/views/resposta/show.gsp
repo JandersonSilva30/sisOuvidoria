@@ -27,7 +27,7 @@
 				<li class="fieldcontain">
 					<span id="manifesto-label" class="property-label"><g:message code="resposta.manifesto.label" default="Manifesto" /></span>
 					
-						<span class="property-value" aria-labelledby="manifesto-label"><g:link controller="manifesto" action="show" id="${respostaInstance?.manifesto?.id}">${respostaInstance?.manifesto?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="manifesto-label"><g:link controller="manifesto" action="show" id="${respostaInstance?.manifesto?.id}">${respostaInstance?.manifesto?.id}</g:link></span>
 					
 				</li>
 				</g:if>

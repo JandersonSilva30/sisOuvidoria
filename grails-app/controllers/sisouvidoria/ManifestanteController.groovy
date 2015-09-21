@@ -80,8 +80,8 @@ class ManifestanteController {
             notFound()
             return
         }
-
-        manifestanteInstance.delete flush:true
+		
+		manifestanteInstance.delete flush:true
 
         request.withFormat {
             form multipartForm {

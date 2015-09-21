@@ -24,8 +24,9 @@
 			<thead>
 					<tr>
 					
-						<th><g:message code="resposta.manifesto.label" default="Manifesto" /></th>
-					
+						<g:sortableColumn property="dataResposta" title="${message(code: 'resposta.id.label', default: 'Codigo')}" />
+						
+						
 						<g:sortableColumn property="dataResposta" title="${message(code: 'resposta.dataResposta.label', default: 'Data Resposta')}" />
 					
 						<g:sortableColumn property="respostaRelato" title="${message(code: 'resposta.respostaRelato.label', default: 'Resposta Relato')}" />
@@ -36,8 +37,9 @@
 				<g:each in="${respostaInstanceList}" status="i" var="respostaInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${respostaInstance.id}">${fieldValue(bean: respostaInstance, field: "manifesto")}</g:link></td>
-					
+						<td><g:link action="show" id="${respostaInstance.id}">${fieldValue(bean: respostaInstance, field: "id")}</g:link></td>
+						
+										
 						<td><g:formatDate date="${respostaInstance.dataResposta}" /></td>
 					
 						<td>${fieldValue(bean: respostaInstance, field: "respostaRelato")}</td>

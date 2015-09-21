@@ -2,14 +2,16 @@ package sisouvidoria
 
 class Endereco {
 	
-	String logradouro, bairro, cidade, uf
-	
+	String logradouro, bairro, cidade, uf	
 			
 	Manifestante manifestante
+	
+	
+	static belongTo = [Manifestante]
 
 	static constraints = {
 		
-		manifestante nullable : true , blank :true
+		//manifestante nullable : true , blank :true
 	}
 	
 	static mapping = {
